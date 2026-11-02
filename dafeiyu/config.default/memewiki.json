@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "maxQueryChars": 10,
+  "maxChars": 700,
+  "learnLimit": 40
+}

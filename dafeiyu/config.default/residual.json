@@ -1,0 +1,21 @@
+{
+  "_comment": "跨会话思维链残留通道。R(t)=w_f*exp(-t/tau_f)+(1-w_f)*exp(-t/tau_s)，t 为距 last_active_at 的分钟数。",
+  "enabled": true,
+  "w_fast": 0.65,
+  "tau_fast_min": 8,
+  "tau_slow_min": 55,
+  "salience_boost": 0.5,
+  "open_boost": 0.8,
+  "level0_threshold": 0.5,
+  "level1_threshold": 0.22,
+  "level2_threshold": 0.08,
+  "cold_start_topk": 6,
+  "per_chain_cap": 3,
+  "pool_capacity": 200,
+  "idle_timeout_min": {
+    "qq": 15,
+    "desktop": 3
+  },
+  "mood_bonus": 0.1,
+  "touch_salience_gain": 0.05
+}

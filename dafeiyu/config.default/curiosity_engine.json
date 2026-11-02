@@ -1,0 +1,24 @@
+{
+  "_comment": "v13 自主好奇心引擎。开关与调度间隔在这里，状态在 state/curiosity_engine.json。",
+  "enabled": true,
+  "auto_learn": true,
+  "interval_minutes": 30,
+  "threshold": 0.5,
+  "weights": {
+    "specific": 0.4,
+    "progress": 0.3,
+    "diversive": 0.2,
+    "boredom": 0.3
+  },
+  "progress_threshold": 0.01,
+  "boredom_accumulation_rate": 0.08,
+  "boredom_decay_rate": 0.02,
+  "budget_limit_per_day": 0,
+  "max_domains": 12,
+  "seed_domains": [
+    "语言风格",
+    "情绪理解",
+    "人际边界",
+    "生活常识"
+  ]
+}

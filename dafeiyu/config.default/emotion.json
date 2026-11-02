@@ -1,0 +1,158 @@
+{
+  "_comment": "五维情绪：取值 0~100（0 = 没有该情绪，显示层按 1~100 呈现）。半衰期单位=分钟。",
+  "dims": [
+    "joy",
+    "happiness",
+    "sadness",
+    "inferiority",
+    "shyness"
+  ],
+  "cn": {
+    "joy": "愉悦",
+    "happiness": "幸福",
+    "sadness": "难过",
+    "inferiority": "自卑",
+    "shyness": "害羞"
+  },
+  "group": {
+    "joy": "positive",
+    "happiness": "positive",
+    "sadness": "negative",
+    "inferiority": "negative",
+    "shyness": "other"
+  },
+  "initial": {
+    "joy": 60,
+    "happiness": 55,
+    "sadness": 0,
+    "inferiority": 0,
+    "shyness": 0
+  },
+  "baseline": {
+    "joy": 55,
+    "happiness": 50,
+    "sadness": 5,
+    "inferiority": 5,
+    "shyness": 5
+  },
+  "half_life_min": {
+    "joy": 50,
+    "happiness": 1200,
+    "sadness": 150,
+    "inferiority": 2160,
+    "shyness": 120
+  },
+  "protect": {
+    "window_min": 10,
+    "thresholds": {
+      "joy": 60,
+      "happiness": 60,
+      "sadness": 60,
+      "inferiority": 60,
+      "shyness": 70
+    }
+  },
+  "rpe": {
+    "decay": 0.85,
+    "floor": 0.2,
+    "window_min": 120
+  },
+  "salience_boost": {
+    "window_min": 5,
+    "reward": 0.3,
+    "punishment": 0.3
+  },
+  "deltas": {
+    "praise": {
+      "type": "reward",
+      "joy": 8,
+      "happiness": 5,
+      "sadness": -3,
+      "inferiority": -3,
+      "shyness": 2
+    },
+    "intimacy": {
+      "type": "reward",
+      "joy": 10,
+      "happiness": 6,
+      "sadness": -4,
+      "inferiority": -4,
+      "shyness": 4
+    },
+    "request_met": {
+      "type": "reward",
+      "joy": 6,
+      "happiness": 4,
+      "sadness": -2,
+      "inferiority": -2,
+      "shyness": 1
+    },
+    "cared": {
+      "type": "reward",
+      "joy": 6,
+      "happiness": 5,
+      "sadness": -3,
+      "inferiority": -2,
+      "shyness": 1
+    },
+    "ignored": {
+      "type": "punishment",
+      "joy": -9,
+      "happiness": -6,
+      "sadness": 11,
+      "inferiority": 6,
+      "shyness": 0
+    },
+    "request_denied": {
+      "type": "punishment",
+      "joy": -5,
+      "happiness": -3,
+      "sadness": 6,
+      "inferiority": 4,
+      "shyness": 0
+    },
+    "insult": {
+      "type": "punishment",
+      "joy": -18,
+      "happiness": -12,
+      "sadness": 16,
+      "inferiority": 12,
+      "shyness": 0
+    },
+    "abandoned": {
+      "type": "punishment",
+      "joy": -20,
+      "happiness": -18,
+      "sadness": 20,
+      "inferiority": 15,
+      "shyness": 0
+    }
+  },
+  "scale": {
+    "shy_base": 20,
+    "shy_per_level": 15,
+    "shy_cap": 45
+  },
+  "behavior": {
+    "positive_threshold": 60,
+    "negative_threshold": 60,
+    "shy_threshold": 70,
+    "ignore_prob_negative": 0.65,
+    "delay_negative_ms": [
+      30000,
+      600000
+    ],
+    "delay_positive_ms": [
+      0,
+      2000
+    ],
+    "delay_normal_ms": [
+      1000,
+      4000
+    ],
+    "delay_shy_ms": [
+      2000,
+      10000
+    ]
+  }
+}

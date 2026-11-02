@@ -1,0 +1,21 @@
+{
+  "_comment": "费用归因：调用打标 + 本地账本。estimated 是调用前估算，actual 是用真实 usage 回算，两者不互相冒充。",
+  "enabled": true,
+  "backend": "sqlite",
+  "currency": "CNY",
+  "feature_tags_enforced": true,
+  "estimate_warn_threshold": 0.2,
+  "estimate_fail_threshold": 0.5,
+  "estimated_output_tokens": {
+    "chat": 220,
+    "chitchat": 60,
+    "learning": 900,
+    "self_dialogue": 1600,
+    "memory_compress": 600,
+    "vision_static": 260,
+    "vision_animation": 260,
+    "vision_browse": 260,
+    "voice": 120,
+    "other": 200
+  }
+}

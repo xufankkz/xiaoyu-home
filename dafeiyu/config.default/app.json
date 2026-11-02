@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "window": {
+    "width": 1240,
+    "height": 860,
+    "min_width": 980,
+    "min_height": 680
+  },
+  "tick": {
+    "app_seconds": 20,
+    "headless_seconds": 60,
+    "slow_tick_warn_seconds": 20
+  },
+  "learning": {
+    "window_start": "00:00",
+    "window_end": "01:00",
+    "self_dialogue_offset_min": 30,
+    "self_dialogue_minutes": 30,
+    "consolidate_min_after_end": 10,
+    "archive_min_after_end": 180,
+    "timezone": "Asia/Shanghai"
+  },
+  "single_instance": true,
+  "llm_timeout_seconds": 900,
+  "bridge": {
+    "enabled": false,
+    "emotion_mode": "local",
+    "dir": "",
+    "send_api": "",
+    "status_api": "",
+    "owner_qq": "",
+    "owner_name": "",
+    "core_emotion_api_port": 18766,
+    "token": ""
+  },
+  "embedder": {
+    "backend": "tfidf"
+  },
+  "legacy": {
+    "root": ""
+  }
+}

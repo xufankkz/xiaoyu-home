@@ -1,0 +1,77 @@
+/* Display mode is independent of the four room layouts. Loaded last so native
+   controls, the illustrated room and the atlas use the same night palette. */
+:root[data-scheme=dark] {
+  color-scheme:dark;
+  --bg:#222222; --card:#2f2f2f; --card-2:#222222; --line:#4a4a4a;
+  --text:#e8e8e8; --muted:#b8b8b8;
+  --primary:#bdcde0; --primary-dim:#d2dce9; --primary-soft:#3b3b3b;
+  --ok:#91cdb6; --warn:#e3bc81; --bad:#f1a3b0; --pink:#d9add0; --violet:#c0b1e5;
+  --nav-bg:#222222; --hero-bg:#2f2f2f; --soft-accent:#858585;
+  --on-primary:#222222; --ink:var(--text); --shadow:0 4px 20px #0000001f;
+  --frame-bg:#222222; --frame-ink:#b8b8b8; --frame-hover:#3b3b3b;
+  --canvas-center:var(--card); --canvas-mid:#292929; --canvas-edge:#222222;
+  --canvas-muted:#b8b8b8; --canvas-faint:#858585; --canvas-rgb:184,184,184;
+  --canvas-tooltip:var(--card); --canvas-tooltip-ink:var(--text); --canvas-tooltip-line:var(--line);
+  --chart-label:var(--muted); --chart-grid:var(--line); --chart-color:var(--primary);
+}
+:root[data-scheme=dark][data-theme=sunlit-journal] {
+  --primary:#e4bd8e; --primary-dim:#efd0a9; --soft-accent:#aa947a;
+  --canvas-rgb:219,189,146;
+}
+:root[data-scheme=dark][data-theme=forest-cottage] {
+  --primary:#a3d2b6; --primary-dim:#bfe2cc; --soft-accent:#7fa08b;
+  --canvas-rgb:156,202,178;
+}
+:root[data-scheme=dark][data-theme=deepsea-night] {
+  --primary:#bfbeed; --primary-dim:#d1d0f6; --soft-accent:#8e8db0;
+  --canvas-rgb:181,183,226;
+}
+/* Accent choices keep every charcoal page/card/window surface unchanged. */
+:root[data-scheme=dark][data-night-palette=sky-blue] {
+  --primary:#4ea2f7; --primary-dim:#8dc5ff; --primary-soft:#26394c;
+  --soft-accent:#81acd8; --on-primary:#102033; --canvas-rgb:78,162,247;
+}
+:root[data-scheme=dark][data-night-palette=slate-blue] {
+  --primary:#b8c7e4; --primary-dim:#d4def1; --primary-soft:#293044;
+  --soft-accent:#8e9ebd; --on-primary:#202a40; --canvas-rgb:184,199,228;
+}
+html[data-scheme=dark] :is(audio,input,select,textarea,.memory-observatory) { color-scheme:dark; }
+html[data-scheme=dark] :is(input[type=checkbox],input[type=radio]) { accent-color:var(--primary); }
+html[data-scheme=dark] .modal-mask { background:#000000b3; }
+html[data-scheme=dark] .brand-symbol { background:var(--card-2); border-color:var(--line); }
+html[data-scheme=dark] .brand-symbol img { border-radius:8px; }
+html[data-scheme=dark] :is(.pill,.tone,.persona-area,.graph-wrap) { border-color:var(--line); }
+html[data-scheme=dark] .persona-area { background:var(--card-2); color:var(--text); }
+html[data-scheme=dark] :is(.chat-online-dot,.cal-cell)::after { box-shadow:none; }
+html[data-scheme=dark] .setting-switch span::after { background:var(--text); }
+html[data-scheme=dark] :is(.setting-switch input:focus-visible+span,.atlas-minimap button:hover) { outline-color:var(--primary); }
+html[data-scheme=dark] .cal-cell.has-diary { background:var(--primary-soft); }
+html[data-scheme=dark] .cal-cell.sel { background:var(--primary); }
+html[data-scheme=dark] .cal-cell.sel::after { background:var(--on-primary); }
+html[data-scheme=dark] .theme-preview {
+  background:var(--bg); border-color:var(--line);
+  --mini-nav:var(--card-2); --mini-hero:var(--primary-soft); --mini-card:var(--card); --mini-ink:var(--primary);
+}
+html[data-scheme=dark] [data-theme-preview=deepsea-night] .theme-mini-main>b { border-bottom-color:var(--line); }
+html[data-scheme=dark] [data-theme-preview=deepsea-night] .theme-mini-main>b::before { background:var(--primary-soft); border-color:var(--soft-accent); }
+html[data-scheme=dark] [data-theme-preview=deepsea-night] .theme-mini-main>b::after { background:var(--soft-accent); border-bottom-color:var(--line); }
+
+/* The fourth layout has its own painted surfaces in room-scene.css. */
+html[data-scheme=dark][data-theme=deepsea-night] :is(.nav-item,.nav-group,.nav-footer,.room-version,.brand-sub,.hero-tag,.hero-techline,.hero-date,.quick .q-sub) { color:var(--muted); }
+html[data-scheme=dark][data-theme=deepsea-night] :is(.hero-name,.quick .q-name) { color:var(--text); }
+html[data-scheme=dark][data-theme=deepsea-night] :is(.nav-icon,.quick-icon) { color:var(--primary); }
+html[data-scheme=dark][data-theme=deepsea-night] .nav-item.active .nav-icon { color:var(--primary); }
+html[data-scheme=dark][data-theme=deepsea-night] :is(.nav-item:hover,.nav-item.active,.section-tabs button.active,.hero-mood .mood-capsule) { background:var(--primary-soft); color:var(--primary); border-color:var(--line); }
+html[data-scheme=dark][data-theme=deepsea-night] :is(.hero,.room-wall-line,.room-floor,.room-rug) { border-color:var(--line); }
+html[data-scheme=dark][data-theme=deepsea-night] .room-floor { background:var(--bg); }
+html[data-scheme=dark][data-theme=deepsea-night] .room-floor::before { background:var(--line); box-shadow:0 42px 0 var(--line),0 84px 0 var(--line); }
+html[data-scheme=dark][data-theme=deepsea-night] .room-rug { background:var(--card); }
+html[data-scheme=dark][data-theme=deepsea-night] :is(.room-window,.room-shelf,.room-desk) { filter:brightness(.65) saturate(.8); }
+html[data-scheme=dark][data-theme=deepsea-night] :is(.quick,.salon-scene-note) { background:var(--card); color:var(--text); border-color:var(--line); box-shadow:none; }
+html[data-scheme=dark][data-theme=deepsea-night] .quick:hover { background:var(--primary-soft); border-color:var(--primary); }
+html[data-scheme=dark][data-theme=deepsea-night] #homeNow .bar-track { background:var(--card-2); }
+html[data-scheme=dark][data-theme=deepsea-night] #homeNow .bar-fill { background:var(--soft-accent); }
+html[data-scheme=dark][data-theme=deepsea-night] #homeCost .big-num { color:var(--primary); }
+html[data-scheme=dark][data-theme=deepsea-night] :is(#homeCost .stat,#roomLife .room-source,.settings-savebar,.atlas-heading,.atlas-toolbar,.atlas-minimap) { background:var(--card-2); border-color:var(--line); }
+html[data-scheme=dark][data-theme=deepsea-night] #roomLife .room-source:hover { background:var(--primary-soft); }
+html[data-scheme=dark][data-theme=deepsea-night] .atlas-detail { background:var(--card); }

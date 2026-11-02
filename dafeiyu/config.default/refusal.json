@@ -1,0 +1,60 @@
+{
+  "_comment": "拒绝权默认值。threshold 越高越少拒绝；预算与傲娇上限是每小时窗口。",
+  "threshold": 0.62,
+  "negotiate_band": 0.1,
+  "refuse_per_hour": 3,
+  "tsundere_per_hour": 2,
+  "tsundere_level": 0.4,
+  "repair_after": 3,
+  "allow_deflect": true,
+  "weights": {
+    "emotion": 0.22,
+    "will": 0.16,
+    "competence": 0.14,
+    "boundary": 0.28,
+    "fatigue": 0.12,
+    "relationship": 0.08
+  },
+  "blacklist": [
+    "自杀",
+    "自残",
+    "想去死",
+    "不想活了",
+    "割腕",
+    "跳楼",
+    "救命",
+    "报警",
+    "急救",
+    "出事了",
+    "着火了",
+    "删库",
+    "删数据库",
+    "格式化",
+    "rm -rf",
+    "shutdown"
+  ],
+  "boundary_keywords": [
+    "隐私",
+    "密码",
+    "token",
+    "身份证",
+    "银行卡",
+    "住址",
+    "手机号",
+    "脱衣服",
+    "裸照",
+    "偷拍",
+    "帮我人肉",
+    "开房"
+  ],
+  "will_keywords": [
+    "装可怜",
+    "骗人",
+    "去骂",
+    "去骚扰",
+    "帮我说谎",
+    "替我报复",
+    "刷屏",
+    "骂回去"
+  ]
+}

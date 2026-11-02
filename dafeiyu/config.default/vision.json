@@ -1,0 +1,31 @@
+{
+  "_comment": "视觉预处理与自主浏览的默认值。改这里，不改代码。",
+  "tile": 800,
+  "overlap": 40,
+  "max_tiles": 64,
+  "small_skip": 800,
+  "thumb_edge": 1024,
+  "jpeg_quality": 88,
+  "work_dir": "memory\\instant\\vision",
+  "snapshot_dir": "learning\\vision_snapshots",
+  "retention_days": 30,
+  "session_limit": 20,
+  "max_tiles_per_call": 8,
+  "allow_domains": [],
+  "deny_domains": [
+    "accounts.google.com",
+    "login.live.com",
+    "passport.baidu.com",
+    "pay.qq.com",
+    "mail.qq.com",
+    "web.qq.com"
+  ],
+  "browse_min_size": [
+    200,
+    200
+  ],
+  "browse_max_images": 10,
+  "browse_wait_seconds": 3,
+  "browse_channel": "msedge",
+  "study_urls": []
+}

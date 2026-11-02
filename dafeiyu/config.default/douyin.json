@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "minutes": 30,
+  "perVideoSeconds": 10,
+  "jitterSeconds": 2,
+  "likeProbability": 0.15,
+  "maxEmptyStreak": 3,
+  "headed": true
+}

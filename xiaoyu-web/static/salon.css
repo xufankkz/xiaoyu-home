@@ -1,0 +1,201 @@
+/* The fourth room is a different composition, not a palette overlay.
+   Keep its saved ID for existing preferences; all business DOM stays mounted. */
+.salon-only { display:none; }
+:root[data-theme=deepsea-night] {
+  color-scheme:light;
+  --bg:#f6f4ef; --card:#fffefa; --card-2:#eeede7; --line:#deddd4;
+  --primary:#386a72; --primary-dim:#28545c; --primary-soft:#e2eeeb;
+  --text:#283b40; --muted:#697571; --ok:#38765c; --warn:#946526;
+  --bad:#b65050; --pink:#ab6377; --violet:#7e6a99;
+  --radius:5px; --radius-sm:5px; --shadow:none;
+  --nav-bg:#273a40; --hero-bg:#f6f4ef; --soft-accent:#9fbdb4;
+  --on-primary:#fffefa; --frame-bg:#f6f4ef; --frame-ink:#52655f; --frame-hover:#e6e8df;
+  --canvas-center:#fffefa; --canvas-mid:#f8f8f1; --canvas-edge:#f0f2e9;
+  --canvas-muted:#60796e; --canvas-faint:#b1bfb3; --canvas-rgb:92,135,119;
+  --canvas-tooltip:#fffefa; --canvas-tooltip-ink:#344e43; --canvas-tooltip-line:#a9c3b1;
+  --chart-label:#697571; --chart-grid:#deddd4; --chart-color:#46776e;
+  --salon-peach:#efd5bd; --salon-nav-ink:#d0dbd9; --salon-nav-muted:#a7bdb8;
+}
+html[data-theme=deepsea-night] .room-default { display:none; }
+html[data-theme=deepsea-night] .salon-only { display:inline; }
+html[data-theme=deepsea-night] .view { max-width:1480px; animation:none; }
+html[data-theme=deepsea-night] .main { padding:30px 28px 50px; }
+html[data-theme=deepsea-night] .page-head { position:relative; align-items:center; gap:8px 16px; padding:23px 0 20px; margin:0 0 28px; border-bottom:1px solid #bfc7bd; }
+html[data-theme=deepsea-night] .page-head::before { content:'小鱼之家 / 她的生活手记'; position:absolute; top:0; left:0; color:var(--muted); font-size:10px; letter-spacing:.09em; }
+html[data-theme=deepsea-night] .page-title { font-family:'Noto Serif SC','Songti SC','SimSun',serif; font-size:calc(32px * var(--font-scale,1)); font-weight:500; letter-spacing:.06em; }
+html[data-theme=deepsea-night] .page-sub { font-size:calc(12px * var(--font-scale,1)); }
+html[data-theme=deepsea-night] .card { box-shadow:none; border-radius:5px; background:var(--card); padding:22px 24px; }
+html[data-theme=deepsea-night] .card-title { font-size:calc(15px * var(--font-scale,1)); font-weight:600; padding-bottom:13px; border-bottom:1px solid var(--line); margin-bottom:18px; }
+html[data-theme=deepsea-night] .card-title::before { display:none; }
+html[data-theme=deepsea-night] .card-title .title-extra { font-size:10px; letter-spacing:0; }
+html[data-theme=deepsea-night] :is(.btn,.seg,.tone,.ev,.mem-item,.settings-info,.cal-cell,.modal) { border-radius:5px; }
+html[data-theme=deepsea-night] .btn { padding:8px 15px; }
+html[data-theme=deepsea-night] .btn.sm { padding:5px 10px; }
+html[data-theme=deepsea-night] .section-tabs { border-bottom:1px solid var(--line); gap:0 18px; padding:0; }
+html[data-theme=deepsea-night] .section-tabs button { border:0; border-bottom:3px solid transparent; border-radius:0; background:transparent; padding:10px 2px; color:var(--muted); }
+html[data-theme=deepsea-night] .section-tabs button.active { border-color:var(--primary); background:transparent; color:var(--text); }
+html[data-theme=deepsea-night] .stat { border-radius:0; border:0; border-left:1px solid var(--line); padding:6px 12px; background:transparent; }
+html[data-theme=deepsea-night] .stat:first-child { border-left:0; padding-left:0; }
+html[data-theme=deepsea-night] .mood-capsule { border:0; border-radius:30px; padding:5px 13px; }
+html[data-theme=deepsea-night] .modal-mask { background:#24332f66; }
+html[data-theme=deepsea-night] audio { color-scheme:light; }
+
+/* Navigation is a separate, compact object in the room, with persistent labels. */
+html[data-theme=deepsea-night] .nav { background:var(--nav-bg); border:0; }
+html[data-theme=deepsea-night] :is(.nav-item,.nav-icon,.nav-footer,.room-version,.brand-name) { color:var(--salon-nav-ink); }
+html[data-theme=deepsea-night] :is(.brand-caption,.nav-group,.brand-sub) { color:var(--salon-nav-muted); }
+html[data-theme=deepsea-night] .nav-item { border:0; border-radius:7px; gap:9px; }
+html[data-theme=deepsea-night] .nav-item:hover { background:#354c51; border:0; color:#fffefa; }
+html[data-theme=deepsea-night] .nav-item.active { background:#f0d3ba; border:0; color:#30434a; }
+html[data-theme=deepsea-night] .nav-item.active .nav-icon { color:#30434a; }
+html[data-theme=deepsea-night] .nav-item.active::after { display:none; }
+html[data-theme=deepsea-night] :is(.settings-bottom,.nav-footer) { border-color:#49605f; }
+html[data-theme=deepsea-night] .nav-item:focus-visible { outline-color:#f0d3ba; }
+html[data-theme=deepsea-night] .brand-symbol { background:#faf7ef; border:0; border-radius:13px; }
+
+/* The home scene has typography, a character corner and an independent daily page. */
+html[data-theme=deepsea-night] .hero { margin:0 0 18px; padding:42px 28px 48px; min-height:345px; background:var(--hero-bg); border:0; border-radius:0; align-items:center; gap:0; isolation:isolate; }
+html[data-theme=deepsea-night] .hero::before { width:43%; height:83%; inset:auto 0 0 auto; border:0; background:var(--salon-peach); border-radius:150px 150px 16px 16px; z-index:-1; }
+html[data-theme=deepsea-night] .hero::after { content:''; position:absolute; right:7%; top:16%; width:31%; aspect-ratio:1; border:1px solid #cad4c8; border-radius:50%; z-index:-2; }
+html[data-theme=deepsea-night] .hero-main { flex:1 1 56%; }
+html[data-theme=deepsea-night] .hero-techline { font-size:calc(11px * var(--font-scale,1)); letter-spacing:.12em; margin-bottom:20px; color:var(--primary); }
+html[data-theme=deepsea-night] .hero-techline .salon-only::before { content:''; display:inline-block; width:6px; height:6px; border-radius:50%; background:#83a696; margin:0 8px 2px 0; }
+html[data-theme=deepsea-night] .hero-name { font-family:'Noto Serif SC','Songti SC','SimSun',serif; font-size:calc(37px * var(--font-scale,1)); font-weight:500; line-height:1.55; letter-spacing:.02em; }
+html[data-theme=deepsea-night] .hero-tag { font-size:calc(12px * var(--font-scale,1)); line-height:1.95; max-width:270px; margin-top:16px; }
+html[data-theme=deepsea-night] .hero-portrait { height:auto; width:43%; max-width:43%; max-height:320px; align-self:flex-end; object-fit:contain; margin:0 -12px -48px 0; }
+html[data-theme=deepsea-night] .hero-date { font-size:10px; right:4px; top:6px; }
+html[data-theme=deepsea-night] .hero-mood { margin-top:17px; }
+html[data-theme=deepsea-night] .salon-scene-note { position:absolute; bottom:12px; right:16px; padding:4px 10px; background:#fffefa; border-radius:20px; font-size:10px; letter-spacing:.08em; color:#645b50; z-index:3; }
+html[data-theme=deepsea-night] #homeQuick { padding:20px 0; border:0; border-top:1px solid #bfc7bd; border-bottom:1px solid #bfc7bd; border-radius:0; background:transparent; }
+html[data-theme=deepsea-night] #homeQuick .card-title { padding:0; border:0; margin-bottom:16px; }
+html[data-theme=deepsea-night] #homeQuick .title-extra { display:none; }
+html[data-theme=deepsea-night] .quick-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px 4px; }
+html[data-theme=deepsea-night] .quick { padding:8px 10px; border:0; border-radius:5px; background:transparent; text-align:left; min-width:0; }
+html[data-theme=deepsea-night] .quick:hover { background:#e9ede4; }
+html[data-theme=deepsea-night] .quick-title-row { gap:7px; }
+html[data-theme=deepsea-night] .quick .q-name { font-size:calc(12px * var(--font-scale,1)); }
+html[data-theme=deepsea-night] .quick .q-sub { font-size:calc(10px * var(--font-scale,1)); padding-left:24px; margin-top:3px; }
+html[data-theme=deepsea-night] #homeNow { border:0; border-top:3px solid #a2b9a6; background:#eaf0e6; padding:23px 24px; }
+html[data-theme=deepsea-night] #homeNow .card-title { display:block; border-color:#cdd8c7; }
+html[data-theme=deepsea-night] #homeNow .title-extra { display:block; margin:5px 0 0; }
+html[data-theme=deepsea-night] #homeNow .bar-track { background:#d6e0d0; height:5px; }
+html[data-theme=deepsea-night] #homeNow .bar-fill { background:#779987; }
+html[data-theme=deepsea-night] #homeNow .bar-row { margin-bottom:12px; }
+html[data-theme=deepsea-night] #homeNow .meter { height:5px; background:#d6e0d0; border:0; }
+html[data-theme=deepsea-night] #homeNow .mood-capsule { background:#fffefa; }
+html[data-theme=deepsea-night] #homeCost { background:transparent; border:0; border-top:1px solid #bfc7bd; border-radius:0; padding:24px 0; }
+html[data-theme=deepsea-night] #homeCost .card-title { padding:0; border:0; }
+html[data-theme=deepsea-night] #homeCost .big-num { font-size:calc(32px * var(--font-scale,1)); font-weight:500; letter-spacing:-.03em; }
+html[data-theme=deepsea-night] #homeCost .stat { padding-right:4px; padding-left:8px; }
+html[data-theme=deepsea-night] #homeCost .stat:first-child { padding-left:0; }
+html[data-theme=deepsea-night] #homeCost .stat .k { font-size:10px; }
+html[data-theme=deepsea-night] #roomLife { padding:24px 0 0; border:0; background:transparent; }
+html[data-theme=deepsea-night] #roomLife .card-title { border:0; padding:0; }
+html[data-theme=deepsea-night] #roomLife .room-source { position:relative; padding:14px 12px 15px 24px; border-left:1px solid #cbd4c8; border-bottom:0; margin-left:4px; }
+html[data-theme=deepsea-night] #roomLife .room-source::before { content:''; position:absolute; width:7px; height:7px; background:#8eab99; border:3px solid var(--bg); border-radius:50%; top:20px; left:-7px; }
+html[data-theme=deepsea-night] #roomLife .room-source:hover { background:#efeee7; }
+html[data-theme=deepsea-night] #roomLife .room-source>strong { font-family:'Noto Serif SC','Songti SC','SimSun',serif; font-size:calc(17px * var(--font-scale,1)); font-weight:500; }
+
+/* Theme previews reflect the new two-column scene and side page. */
+.theme-preview[data-theme-preview=deepsea-night] { background:#f6f4ef; border-color:#deddd4; --mini-nav:#273a40; --mini-hero:#efd5bd; --mini-card:#e4ecdf; --mini-ink:#9eb9a8; grid-template-columns:15% minmax(0,1fr); }
+[data-theme-preview=deepsea-night] .theme-mini-nav { border-radius:6px; padding:6px 3px; }
+[data-theme-preview=deepsea-night] .theme-mini-main { display:grid; grid-template-columns:minmax(0,1fr) 28%; grid-template-rows:1fr 14px; gap:5px; }
+[data-theme-preview=deepsea-night] .theme-mini-main>b { height:auto; border-radius:18px 18px 3px 3px; }
+[data-theme-preview=deepsea-night] .theme-mini-main>span { display:contents; }
+[data-theme-preview=deepsea-night] .theme-mini-main em:first-child { grid-column:2; grid-row:1/3; border:0; }
+[data-theme-preview=deepsea-night] .theme-mini-main em:last-child { grid-column:1; border-radius:0; border-top:1px solid #b9c9bd; background:transparent; }
+
+/* Atlas controls become a working toolbar above the map; all controls retain IDs. */
+html[data-theme=deepsea-night] .memory-observatory { display:flex; flex-direction:column; border-radius:5px; }
+html[data-theme=deepsea-night] .atlas-heading { order:0; background:var(--card); }
+html[data-theme=deepsea-night] .atlas-heading h3 { font-family:'Noto Serif SC','Songti SC','SimSun',serif; font-weight:500; }
+html[data-theme=deepsea-night] .atlas-toolbar { order:1; border-top:0; border-bottom:1px solid var(--line); background:#eaf0e6; }
+html[data-theme=deepsea-night] .atlas-body { order:2; }
+html[data-theme=deepsea-night] .atlas-footer { order:3; }
+html[data-theme=deepsea-night] .atlas-results { top:calc(100% + 6px); bottom:auto; }
+html[data-theme=deepsea-night] .atlas-detail { background:var(--card); border-radius:4px; }
+html[data-theme=deepsea-night] .memory-observatory.is-expanded { display:flex; }
+html[data-theme=deepsea-night] .memory-observatory.is-expanded .atlas-body { flex:1; min-height:0; }
+html[data-theme=deepsea-night] .settings-savebar { background:#e7ede2; border-radius:5px; box-shadow:none; }
+
+@media (min-width:900px) {
+  html[data-theme=deepsea-night] .app { grid-template-columns:164px minmax(0,1fr); grid-template-rows:1fr; }
+  html[data-theme=deepsea-night] .nav { top:16px; margin:16px; width:132px; height:calc(var(--ui-height,100dvh) - 32px); padding:18px 10px 12px; border-radius:20px; }
+  html[data-theme=deepsea-night] .nav-brand { flex-direction:column; gap:9px; align-items:center; padding:0 0 13px; }
+  html[data-theme=deepsea-night] .brand-name { font-size:calc(14px * var(--font-scale,1)); }
+  html[data-theme=deepsea-night] .brand-caption { display:none; }
+  html[data-theme=deepsea-night] .brand-symbol { width:43px; height:43px; }
+  html[data-theme=deepsea-night] .nav-item { padding:7px 10px; font-size:calc(12px * var(--font-scale,1)); min-height:36px; }
+  html[data-theme=deepsea-night] .nav-icon { width:17px; height:17px; }
+  html[data-theme=deepsea-night] .nav-list { gap:3px; padding-right:0; scrollbar-width:thin; }
+  html[data-theme=deepsea-night] .nav-group { color:var(--salon-nav-muted); font-size:9px; padding:14px 8px 6px; letter-spacing:0; }
+  html[data-theme=deepsea-night] .nav-group:first-child { padding-top:3px; }
+  html[data-theme=deepsea-night] .settings-bottom { padding-top:9px; margin-top:9px; }
+  html[data-theme=deepsea-night] .room-version { padding:4px 10px 0; font-size:9px; }
+  html[data-theme=deepsea-night] .nav-footer { padding-top:8px; margin-top:8px; gap:5px; font-size:9px; }
+  html[data-theme=deepsea-night] .nav-footer>span:nth-child(2) { display:none; }
+  html[data-theme=deepsea-night] .brand-sub { font-size:9px; }
+  html[data-theme=deepsea-night] .main { padding:31px 36px 56px 20px; }
+  html[data-theme=deepsea-night] .home-cards>.card { margin:0; }
+  html[data-theme=deepsea-night] #view:has(>.hero) { display:grid; grid-template-columns:minmax(0,1fr) minmax(240px,.65fr); gap:22px; align-items:start; }
+  html[data-theme=deepsea-night] #view:has(>.hero)>.page-head { grid-column:1/-1; margin-bottom:0; }
+  html[data-theme=deepsea-night] #view>.hero { grid-column:1/-1; margin:0; }
+  html[data-theme=deepsea-night] #homeCards { display:contents; grid-template-columns:none; }
+  html[data-theme=deepsea-night] #homeQuick { grid-column:1/-1; grid-row:3; }
+  html[data-theme=deepsea-night] #homeNow { grid-column:1; grid-row:4; }
+  html[data-theme=deepsea-night] #homeCost { grid-column:2; grid-row:4; }
+  html[data-theme=deepsea-night] #roomLife { grid-column:1/-1; grid-row:5; }
+}
+@media (min-width:1200px) {
+  html[data-theme=deepsea-night] #view:has(>.hero) { grid-template-columns:minmax(0,1fr) 268px; gap:24px 28px; }
+  html[data-theme=deepsea-night] #view>.hero { grid-column:1; grid-row:2; padding-left:8px; min-height:350px; }
+  html[data-theme=deepsea-night] #homeNow { grid-column:2; grid-row:2; align-self:stretch; padding-top:25px; }
+  html[data-theme=deepsea-night] #homeQuick { grid-column:1; grid-row:3; }
+  html[data-theme=deepsea-night] #homeCost { grid-column:2; grid-row:3/5; }
+  html[data-theme=deepsea-night] #roomLife { grid-column:1; grid-row:4; }
+  html[data-theme=deepsea-night] .hero-portrait { max-height:335px; }
+  html[data-theme=deepsea-night] .settings-shell { display:grid; grid-template-columns:140px minmax(0,1fr); max-width:none; gap:32px; align-items:start; }
+  html[data-theme=deepsea-night] .settings-tabs { position:sticky; top:24px; display:flex; flex-direction:column; border-bottom:0; border-left:1px solid var(--line); gap:7px; }
+  html[data-theme=deepsea-night] .settings-tabs button { text-align:left; padding:9px 12px; border:0; border-left:3px solid transparent; margin-left:-2px; }
+  html[data-theme=deepsea-night] .settings-tabs button.active { border-left-color:var(--primary); }
+  html[data-theme=deepsea-night] .settings-card { padding:25px 28px 14px; }
+  html[data-theme=deepsea-night] .theme-picker { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (min-width:1600px) {
+  html[data-theme=deepsea-night] #view:has(>.hero) { grid-template-columns:minmax(0,1fr) 310px; column-gap:40px; }
+  html[data-theme=deepsea-night] .main { padding-left:36px; padding-right:48px; }
+  html[data-theme=deepsea-night] .hero { min-height:390px; }
+  html[data-theme=deepsea-night] #view>.hero { min-height:390px; }
+  html[data-theme=deepsea-night] .hero-name { font-size:calc(46px * var(--font-scale,1)); }
+  html[data-theme=deepsea-night] .hero-portrait { max-height:365px; }
+  html[data-theme=deepsea-night] .quick-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  html[data-theme=deepsea-night] .theme-picker { grid-template-columns:repeat(4,minmax(0,1fr)); }
+}
+@media (max-width:899px) {
+  html[data-theme=deepsea-night] .nav { padding:12px; }
+  html[data-theme=deepsea-night] .nav-group { display:none; }
+  html[data-theme=deepsea-night] .nav-item { font-size:12px; }
+  html[data-theme=deepsea-night] .main { padding:22px 18px 40px; }
+  html[data-theme=deepsea-night] .home-cards { display:grid; grid-template-columns:minmax(0,1fr); gap:18px; }
+  html[data-theme=deepsea-night] .home-cards>.card { margin:0; }
+  html[data-theme=deepsea-night] #homeQuick { grid-row:1; }
+  html[data-theme=deepsea-night] .hero-name { font-size:calc(32px * var(--font-scale,1)); }
+  html[data-theme=deepsea-night] .hero { padding-left:8px; }
+}
+@media (max-width:600px) {
+  html[data-theme=deepsea-night] .main { padding:18px 16px 36px; }
+  html[data-theme=deepsea-night] .page-title { font-size:calc(27px * var(--font-scale,1)); }
+  html[data-theme=deepsea-night] .page-head { margin-bottom:18px; }
+  html[data-theme=deepsea-night] .hero { min-height:290px; padding:35px 0 35px; }
+  html[data-theme=deepsea-night] .hero-name { font-size:calc(27px * var(--font-scale,1)); }
+  html[data-theme=deepsea-night] .hero-techline { font-size:9px; margin-bottom:15px; }
+  html[data-theme=deepsea-night] .hero-tag { font-size:10px; max-width:185px; }
+  html[data-theme=deepsea-night] .hero-portrait { width:43%; max-width:43%; margin:0 -4px -35px -15px; }
+  html[data-theme=deepsea-night] .hero::before { width:45%; height:69%; }
+  html[data-theme=deepsea-night] .hero-date { top:2px; font-size:9px; }
+  html[data-theme=deepsea-night] .salon-scene-note { right:4px; font-size:8px; bottom:9px; }
+  html[data-theme=deepsea-night] .quick-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  html[data-theme=deepsea-night] .card { padding:20px 18px; }
+  html[data-theme=deepsea-night] .settings-card { padding:20px 16px 10px; }
+  html[data-theme=deepsea-night] .section-tabs { column-gap:12px; }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "ctranslate2",
+    "url": "https://raw.githubusercontent.com/OpenNMT/CTranslate2/v4.8.4/LICENSE",
+    "sha256": "54aa79d9fe3c09e67a16dcd95b9e88676405a6ec174efda31036983cf7672ecb"
+  },
+  {
+    "name": "sentencepiece",
+    "url": "https://raw.githubusercontent.com/google/sentencepiece/v0.2.2/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "name": "winrt-runtime",
+    "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+    "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+  },
+  {
+    "name": "winrt-Windows.Foundation",
+    "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+    "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+  },
+  {
+    "name": "winrt-Windows.Foundation.Collections",
+    "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+    "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+  },
+  {
+    "name": "winrt-Windows.Globalization",
+    "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+    "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+  },
+  {
+    "name": "winrt-Windows.Graphics.Imaging",
+    "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+    "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+  },
+  {
+    "name": "winrt-Windows.Media.Ocr",
+    "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+    "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+  },
+  {
+    "name": "winrt-Windows.Storage.Streams",
+    "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+    "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+  },
+  {
+    "name": "benchmark",
+    "url": "https://raw.githubusercontent.com/bestiejs/benchmark.js/1.0.0/LICENSE.txt",
+    "sha256": "461f637de80855725eba2c1143f6a3706bba775a1219899bf225d59dbade8f73"
+  },
+  {
+    "name": "saxes",
+    "url": "https://raw.githubusercontent.com/lddubeau/saxes/v6.0.0/LICENSE",
+    "sha256": "0fac2374380621b22e6b50451057721a9c52935b02d16d106a9f04897f061d0e"
+  },
+  {
+    "name": "sherpa-onnx-node",
+    "url": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v1.13.8/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "name": "sherpa-onnx-win-x64",
+    "url": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v1.13.8/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "name": "standardwebhooks",
+    "url": "https://raw.githubusercontent.com/standard-webhooks/standard-webhooks/main/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "name": "@aws-sdk/credential-provider-http",
+    "url": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/main/LICENSE",
+    "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d"
+  },
+  {
+    "name": "@aws-sdk/credential-provider-login",
+    "url": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/main/LICENSE",
+    "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d"
+  },
+  {
+    "name": "@aws-sdk/nested-clients",
+    "url": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/main/LICENSE",
+    "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d"
+  },
+  {
+    "name": "@earendil-works/pi-ai",
+    "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.5.0/LICENSE",
+    "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48"
+  },
+  {
+    "name": "@earendil-works/pi-schema",
+    "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.5.0/LICENSE",
+    "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48"
+  },
+  {
+    "name": "@earendil-works/pi-telemetry",
+    "url": "https://raw.githubusercontent.com/earendil-works/pi/v1.5.0/LICENSE",
+    "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48"
+  },
+  {
+    "name": "@koromix/koffi-win32-x64",
+    "url": "https://raw.githubusercontent.com/Koromix/koffi/master/LICENSE.txt",
+    "sha256": "54abb741a2ba1a7fa89e98d2d3199575e548c8708885eeadab0f5bb83ad22e0e"
+  },
+  {
+    "name": "@xterm/addon-serialize",
+    "url": "https://raw.githubusercontent.com/xtermjs/xterm.js/6.0.0/LICENSE",
+    "sha256": "b569f629d00f2626a8100df2a1798210535621e42164dfd426a6fe5aac7b0ccd"
+  },
+  {
+    "name": "@xterm/headless",
+    "url": "https://raw.githubusercontent.com/xtermjs/xterm.js/6.0.0/LICENSE",
+    "sha256": "b569f629d00f2626a8100df2a1798210535621e42164dfd426a6fe5aac7b0ccd"
+  },
+  {
+    "name": "benchmark",
+    "url": "https://raw.githubusercontent.com/bestiejs/benchmark.js/1.0.0/LICENSE.txt",
+    "sha256": "461f637de80855725eba2c1143f6a3706bba775a1219899bf225d59dbade8f73"
+  }
+]

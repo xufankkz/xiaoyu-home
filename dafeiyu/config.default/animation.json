@@ -1,0 +1,12 @@
+{
+  "_comment": "动态表情（GIF/WebP/APNG）抽帧识别。帧数 3~10，拼图在无 Qt 应用的进程里会退化为逐帧传图。",
+  "enabled": true,
+  "max_frames": 5,
+  "min_frames": 3,
+  "frame_cell_px": 140,
+  "use_sticker_dict_cache": true,
+  "fallback": "local",
+  "inbox_dir": "learning\\vision_inbox",
+  "emoji_emotion_gain": 2,
+  "max_edge_single_frame": 800
+}

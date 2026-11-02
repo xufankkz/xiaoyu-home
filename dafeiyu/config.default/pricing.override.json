@@ -1,0 +1,9 @@
+{
+  "_comment": "本地价表覆盖（元 / 百万 token）。为空则用 core/llm/provider.py 的默认价。",
+  "cache_hit": null,
+  "cache_miss": null,
+  "cache_write": null,
+  "output": null,
+  "peak_multiplier": null,
+  "peak_windows": null
+}

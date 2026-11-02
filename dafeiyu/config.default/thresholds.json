@@ -1,0 +1,169 @@
+{
+  "_comment": "规格里的所有时间/字数/冷却阈值。用户既定规则的值不允许被程序覆盖，只允许在这里调。",
+  "instant": {
+    "hot_hours": 6,
+    "purge_hours": 18,
+    "distill_salience": 0.7,
+    "distill_strength": 0.4
+  },
+  "short": {
+    "promote_min_days": 3,
+    "promote_lookback_days": 14,
+    "compress_target": 150,
+    "compress_tolerance": 20,
+    "batch_source_chars": 300,
+    "promote_salience": 0.6,
+    "parallel_salience": 0.8,
+    "parallel_open_days": 3,
+    "parallel_hits": 3
+  },
+  "long2": {
+    "emotion_read_threshold": 65,
+    "concept_match_min": 2,
+    "top_k": 6,
+    "max_chars": 600
+  },
+  "language": {
+    "summary_max": 1000,
+    "memory_trigger": 3000,
+    "memory_target": 3000,
+    "tolerance": 500,
+    "lock_days": 14
+  },
+  "emotion_memory": {
+    "record_max": 2000,
+    "memory_trigger": 6000,
+    "memory_target": 6000,
+    "tolerance": 1000,
+    "lock_days": 14
+  },
+  "learning": {
+    "window": [
+      "00:00",
+      "01:00"
+    ]
+  },
+  "practice": {
+    "rounds": 300,
+    "batch": 100,
+    "window": [
+      "01:00",
+      "01:30"
+    ]
+  },
+  "consolidate": {
+    "window": [
+      "03:00",
+      "04:00"
+    ]
+  },
+  "forget": {
+    "tau_base_hours": {
+      "thought": 72,
+      "instant": 18,
+      "short": 240
+    },
+    "salience_gain": 1.2,
+    "open_multiplier": 2.0,
+    "level_multiplier": 1.1,
+    "thresholds": {
+      "level1": 0.6,
+      "level2": 0.35,
+      "level3": 0.15
+    },
+    "access_strength": 0.9
+  },
+  "retrieval": {
+    "embed_weight": 0.55,
+    "keyword_weight": 0.45,
+    "mood_bonus": 0.25,
+    "top_k": 12,
+    "graph_hops": 2
+  },
+  "working_memory": {
+    "slots": 9,
+    "hebbian_gain": 0.15,
+    "decay": 0.92,
+    "unbind_below": 0.1
+  },
+  "chitchat": {
+    "positive_interval_min": [
+      5,
+      15
+    ],
+    "neutral_interval_min": [
+      15,
+      40
+    ],
+    "fatigue_after": 3,
+    "fatigue_pause_min": 30,
+    "fatigue_multiplier": 1.5,
+    "fatigue_max_level": 3,
+    "mute_minutes": 45,
+    "ignored_minutes": 90
+  },
+  "curiosity": {
+    "threshold": 0.3,
+    "hourly_web": 6,
+    "daily_web": 30,
+    "fatigue_gain": 0.35,
+    "fatigue_decay_hours": 6,
+    "domain_floor": 0.3,
+    "domain_ceil": 2.5,
+    "mood_pos_gain": 0.004,
+    "mood_neg_gain": 0.003
+  },
+  "arbiter": {
+    "weights": {
+      "dialogue": {
+        "value": 1.0,
+        "urgency": 1.0,
+        "expectancy": 1.0,
+        "cost": 0.2,
+        "cap": 1
+      },
+      "task": {
+        "value": 0.9,
+        "urgency": 0.8,
+        "expectancy": 0.8,
+        "cost": 0.3,
+        "cap": 2
+      },
+      "learn": {
+        "value": 0.7,
+        "urgency": 0.5,
+        "expectancy": 0.6,
+        "cost": 0.5,
+        "cap": 1
+      },
+      "curiosity": {
+        "value": 0.6,
+        "urgency": 0.3,
+        "expectancy": 0.7,
+        "cost": 0.4,
+        "cap": 1
+      },
+      "open_thought": {
+        "value": 0.5,
+        "urgency": 0.6,
+        "expectancy": 0.4,
+        "cost": 0.3,
+        "cap": 2
+      },
+      "chitchat": {
+        "value": 0.5,
+        "urgency": 0.4,
+        "expectancy": 0.5,
+        "cost": 0.7,
+        "cap": 1
+      },
+      "consolidate": {
+        "value": 0.6,
+        "urgency": 0.4,
+        "expectancy": 0.9,
+        "cost": 0.6,
+        "cap": 1
+      }
+    }
+  }
+}

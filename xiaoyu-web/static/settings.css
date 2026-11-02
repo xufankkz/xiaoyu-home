@@ -1,0 +1,75 @@
+body { zoom: var(--ui-scale, 1); }
+.settings-bottom { margin-top: 8px; }
+.settings-bottom .nav-item { width: 100%; }
+.settings-shell { max-width: 1000px; }
+.settings-tabs { margin-bottom: 22px; }
+.settings-tabs button { font-size: calc(14px * var(--font-scale, 1)); }
+.settings-panel[hidden] { display: none !important; }
+.settings-card { padding: 23px 26px 12px; }
+.settings-card h2 { margin: 0 0 5px; font-size: calc(17px * var(--font-scale, 1)); font-weight: 650; }
+.settings-caption { margin: 0 0 15px; color: var(--muted); font-size: calc(12px * var(--font-scale, 1)); }
+.setting-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 15px 0; border-top: 1px solid #edf1f6; }
+.setting-label { display: grid; gap: 4px; min-width: 0; }
+.setting-label strong { font-size: calc(14px * var(--font-scale, 1)); font-weight: 550; }
+.setting-label > span { font-size: calc(12px * var(--font-scale, 1)); color: var(--muted); }
+.setting-control { flex: 0 0 148px; display: flex; justify-content: flex-end; }
+.setting-control input:not([type=checkbox]), .setting-control select, .settings-key > input { width: 100%; padding: 8px 10px; color: var(--text); background: #fbfcfe; border: 1px solid #dce5ef; border-radius: 8px; font: inherit; font-size: calc(13px * var(--font-scale, 1)); min-height: 38px; }
+.setting-switch { position: relative; display: inline-flex; width: 42px; height: 24px; }
+.setting-switch input { position: absolute; inset: 0; margin: 0; z-index: 1; width: 100%; height: 100%; cursor: pointer; opacity: 0; }
+.setting-switch span { width: 42px; height: 24px; background: #d5dfe9; border-radius: 20px; transition: background .12s; }
+.setting-switch span::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; background: white; border-radius: 50%; transition: transform .12s; }
+.setting-switch input:checked + span { background: #6188b5; }
+.setting-switch input:checked + span::after { transform: translateX(18px); }
+.setting-switch input:focus-visible + span { outline: 2px solid #6286b1; outline-offset: 3px; }
+.settings-link { display: inline-block; margin: 12px 0; color: var(--primary); text-underline-offset: 3px; }
+.settings-savebar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center; padding: 15px 18px; margin-top: 20px; position: sticky; bottom: 12px; background: #f1f5fb; border: 1px solid #d6e2f0; border-radius: 12px; z-index: 10; box-shadow: 0 3px 12px #526e8e12; }
+.settings-savebar > span { flex: 1; min-width: 160px; font-size: calc(13px * var(--font-scale, 1)); overflow-wrap: anywhere; }
+.settings-savebar > div { display: flex; gap: 8px; }
+.settings-info { margin: 12px 0; padding: 12px 15px; border-radius: 9px; background: #f5f8fc; overflow-wrap: anywhere; font-size: calc(13px * var(--font-scale, 1)); }
+.settings-info p { margin: 3px 0; }
+.settings-model { display: grid; grid-template-columns: 85px minmax(0,1fr); gap: 10px 18px; margin: 0; }
+.settings-model dt { color: var(--muted); }
+.settings-model dd { margin: 0; }
+.settings-key { margin: 18px 0 12px; border-top: 1px solid var(--line); padding-top: 14px; }
+.settings-key summary { cursor: pointer; color: var(--primary); }
+.settings-key > label { display: block; margin: 12px 0 6px; }
+.settings-key > input { max-width: 480px; display: block; margin-bottom: 12px; }
+.settings-key > button { margin: 0 0 5px; }
+.settings-links, .settings-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+.settings-links a { color: var(--primary); }
+.settings-path { font-family: var(--mono); font-size: calc(12px * var(--font-scale, 1)); }
+.settings-budget-notice { max-width: 1232px; margin: 0 auto 16px; background: #fff5e5; border: 1px solid #ead5af; color: #805f30; border-radius: 10px; padding: 11px 16px; }
+body[data-density=compact] .card { padding-top: 15px; padding-bottom: 15px; }
+.settings-card textarea { width: min(100%, 390px); min-height: 82px; resize: vertical; padding: 10px 12px; border: 1px solid var(--line, #dfe7f1); border-radius: 10px; background: var(--bg, #fff); color: inherit; font: inherit; }
+.settings-card .setting-control:has(textarea) { flex-basis: 390px; }
+.drawing-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 18px 0; }
+.drawing-work { border: 1px solid var(--line, #dfe7f1); border-radius: 14px; overflow: hidden; }
+.drawing-work img, .drawing-placeholder { display: block; width: 100%; height: 210px; object-fit: contain; background: var(--bg, #f3f7fb); }
+.drawing-placeholder { display: grid; place-items: center; color: var(--muted, #69778b); }
+.drawing-work > div:last-child { padding: 14px; }
+.drawing-work strong, .drawing-work span { display: block; }
+.drawing-work p { white-space: pre-wrap; overflow-wrap: anywhere; }
+body[data-density=compact] .list-item, body[data-density=compact] .setting-row { padding-top: 9px; padding-bottom: 9px; }
+body[data-density=compact] .ev { padding-top: 10px; padding-bottom: 10px; }
+body[data-motion=off] *, body[data-motion=off] *::before, body[data-motion=off] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+@media (min-width:900px) {
+  .nav { overflow: hidden; height: var(--ui-height, 100dvh); }
+  .nav-brand, .nav-footer, .settings-bottom { flex: none; }
+  .nav-list { min-height: 0; flex: 1 1 auto; overflow-y: auto; overflow-x: hidden; padding-right: 2px; scrollbar-width: thin; }
+  .nav-list::-webkit-scrollbar { display: block; width: 5px; }
+  .settings-bottom { margin-top: 15px; border-top: 1px solid #dfe7f1; padding-top: 10px; }
+  .nav-footer { margin-top: 10px; padding-top: 10px; }
+}
+@media (max-width:899px) {
+  .settings-bottom { position: absolute; right: 12px; top: 10px; margin: 0; }
+  .settings-bottom .nav-item { min-height: 34px; padding: 5px 9px; }
+  .nav-brand { padding-right: 85px; }
+}
+@media (max-width:600px) {
+  .settings-card { padding: 18px 16px 10px; }
+  .setting-row { gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+  .setting-label { flex: 1 1 170px; }
+  .setting-control { flex-basis: 125px; }
+  .settings-savebar { bottom: 6px; padding: 12px; }
+  .settings-model { grid-template-columns: 66px minmax(0,1fr); gap: 10px; }
+}
