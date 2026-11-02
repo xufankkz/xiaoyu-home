@@ -14,7 +14,7 @@ class Services:
     def dispatch(self, feature, url, raw, content_type, key, price, limit=32*1024*1024):
         identifier = self.client.reserve_fixed(feature, price)
         try:
-            headers = {'Content-Type': content_type, 'User-Agent': 'XiaoyuHome/0.2.0-beta.1'}
+            headers = {'Content-Type': content_type, 'User-Agent': 'XiaoyuHome/0.2.0-beta.2'}
             if key:
                 headers['Authorization'] = 'Bearer ' + key
             request = urllib.request.Request(url, data=raw, headers=headers, method='POST')

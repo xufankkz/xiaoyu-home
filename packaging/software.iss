@@ -1,4 +1,4 @@
-﻿#define AppVersion "0.2.0-beta.1"
+﻿#define AppVersion "0.2.0-beta.2"
 [Setup]
 AppId={{5417E42E-296B-4DDA-9FB2-9E2A93BC012A}
 AppName=小鱼之家·测试发行版
@@ -14,6 +14,7 @@ OutputBaseFilename=XiaoyuHome-{#AppVersion}-Windows-x64-Setup
 Compression=lzma2/fast
 SolidCompression=yes
 WizardStyle=modern
+SetupIconFile=..\xiaoyu-web\static\app.ico
 UninstallDisplayIcon={app}\XiaoyuHome.exe
 CloseApplications=no
 RestartApplications=no
@@ -30,8 +31,8 @@ Source: "..\ADDITIONAL_TERMS.md"; DestDir: "{app}"
 Source: "..\NOTICE.md"; DestDir: "{app}"
 Source: "..\docs\*"; DestDir: "{app}\docs"; Flags: recursesubdirs
 [Icons]
-Name: "{autodesktop}\小鱼之家·测试发行版"; Filename: "{app}\XiaoyuHome.exe"; WorkingDir: "{app}"
-Name: "{group}\小鱼之家·测试发行版"; Filename: "{app}\XiaoyuHome.exe"; WorkingDir: "{app}"
+Name: "{autodesktop}\小鱼之家·测试发行版"; Filename: "{app}\XiaoyuHome.exe"; WorkingDir: "{app}"; IconFilename: "{app}\XiaoyuHome.exe"; IconIndex: 0
+Name: "{group}\小鱼之家·测试发行版"; Filename: "{app}\XiaoyuHome.exe"; WorkingDir: "{app}"; IconFilename: "{app}\XiaoyuHome.exe"; IconIndex: 0
 Name: "{group}\卸载测试发行版"; Filename: "{uninstallexe}"
 [InstallDelete]
 Type: files; Name: "{app}\_internal\source\xiaoyu-web\local_thought_worker.py"

@@ -177,8 +177,9 @@ class SharedWebWindow(QMainWindow):
         self._ready = False
         self._theme_palette = None
         self.data_dir = Path(data_dir)
-        for name in ("小鱼.ico", "大肥鱼.ico"):
-            icon = self.data_dir / "ui/assets" / name
+        icons = [self.data_dir / "ui/assets" / name for name in ("小鱼.ico", "大肥鱼.ico")]
+        icons.append(Path(release_paths.path("xiaoyu-web/static/app.ico")))
+        for icon in icons:
             if icon.is_file():
                 self.setWindowIcon(QIcon(str(icon)))
                 break

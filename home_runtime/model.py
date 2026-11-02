@@ -96,7 +96,7 @@ class ModelClient:
     def _transport(url, payload, key):
         request = urllib.request.Request(url, data=json.dumps(payload, ensure_ascii=False).encode(), method='POST',
                                          headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key,
-                                                  'User-Agent': 'XiaoyuHome/0.2.0-beta.1'})
+                                                  'User-Agent': 'XiaoyuHome/0.2.0-beta.2'})
         try:
             with urllib.request.urlopen(request, timeout=120) as response:
                 raw = response.read(8 * 1024 * 1024 + 1)

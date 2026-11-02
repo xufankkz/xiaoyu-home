@@ -64,9 +64,14 @@ def main():
                 time.sleep(0.3)
             return 0
         from PySide6.QtWidgets import QApplication
+        from PySide6.QtGui import QIcon
         from PySide6.QtCore import QTimer
         from ui.web_window import SharedWebWindow
+        if os.name == 'nt':
+            import ctypes
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('XiaoyuHome.Beta')
         app = QApplication(sys.argv[:1])
+        app.setWindowIcon(QIcon(str(workspace / 'xiaoyu-web/static/app.ico')))
         app.setApplicationName('XiaoyuHomeBeta')
         app.setOrganizationName('XiaoyuHome')
         window = SharedWebWindow(data_dir=workspace / 'dafeiyu/data', url=url)

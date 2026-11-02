@@ -216,7 +216,7 @@ def _run_http(prompt: str, timeout: int, task: str = "dialogue",
         headers={
             "Content-Type": "application/json",
             "Authorization": f"Bearer {key}",
-            "User-Agent": "XiaoyuHome/0.2.0-beta.1",
+            "User-Agent": "XiaoyuHome/0.2.0-beta.2",
             "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
         },
         method="POST",
